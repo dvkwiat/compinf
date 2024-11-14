@@ -1,0 +1,43 @@
+
+\begin{figure}[htbp]\flushleft
+
+\begin{subfigure}[b]{0.8\textwidth}
+\begin{tikzpicture}
+\begin{axis}[ylabel={Seller Choice Probabilities}, width=\textwidth, height=0.3\textheight, no markers, legend style={at={(1.1,0.5)}, anchor=west, legend columns=1}, legend cell align={left}, ultra thick, xmin=-0.01, xmax=0.21, xtick={0,0.05,0.1,0.15,0.2}, xticklabels={}, ymin=0, ymax=1]
+\addplot [color=blue, solid] table [x=l, y=pshh, col sep=comma, unbounded coords=jump] {../output/QRE/QREprobs_n1.data};
+\addlegendentry{$\mathbb{P}(p_H|v_H)$}
+\addplot [color=orange, solid] table [x=l, y=pshl, col sep=comma, unbounded coords=jump] {../output/QRE/QREprobs_n1.data};
+\addlegendentry{$\mathbb{P}(p_H|v_L)$}
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+
+\begin{subfigure}[b]{0.8\textwidth}
+\begin{tikzpicture}
+\begin{axis}[ylabel={Buyer Choice Probabilities}, width=\textwidth, height=0.3\textheight, no markers, legend style={at={(1.1,0.5)}, anchor=west, legend columns=1}, legend cell align={left}, ultra thick, xmin=-0.01, xmax=0.21, xtick={0,0.05,0.1,0.15,0.2}, xticklabels={}, ymin=0, ymax=1]
+\addplot [color=blue, solid] table [x=l, y=pbhh, col sep=comma, unbounded coords=jump] {../output/QRE/QREprobs_n1.data};
+\addlegendentry{$\mathbb{P}(\text{buy}|p_H)$}
+\addplot [color=orange, solid] table [x=l, y=pbll, col sep=comma, unbounded coords=jump] {../output/QRE/QREprobs_n1.data};
+\addlegendentry{$\mathbb{P}(\text{buy}|p_L)$}
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+
+\begin{subfigure}[b]{0.8\textwidth}
+\begin{tikzpicture}
+\begin{axis}[ylabel={Buyer Beliefs}, xlabel={Precision}, width=\textwidth, height=0.3\textheight, no markers, legend style={at={(1.1,0.5)}, anchor=west, legend columns=1}, legend cell align={left}, ultra thick, xmin=-0.01, xmax=0.21, xtick={0,0.05,0.1,0.15,0.2}, xticklabels={0,0.05,0.1,0.15,0.2}, ymin=0, ymax=1]
+\addplot [color=blue, solid] table [x=l, y=muh, col sep=comma, unbounded coords=jump] {../output/QRE/QREprobs_n1.data};
+\addlegendentry{$\mathbb{P}(v_H|p_H)$}
+\addplot [color=orange, solid] table [x=l, y=mul, col sep=comma, unbounded coords=jump] {../output/QRE/QREprobs_n1.data};
+\addlegendentry{$\mathbb{P}(v_H|p_L)$}
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+
+\caption{QRE correspondence for $n=1$}
+\label{QREprobs_n1}
+%\begin{minipage}{0.8\textwidth}
+%\footnotesize
+%\textit{Notes:} This figure is based on the actual parameter values used in the experiment. Because firms are symmetric, the average price is simply $x p_H + (1-x) p_L$ where $x$ is the unconditional probability of an individual firm setting the high price.
+%\end{minipage}
+\end{figure}

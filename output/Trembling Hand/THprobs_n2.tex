@@ -1,0 +1,249 @@
+
+\begin{figure}[htbp]\flushleft
+    
+\begin{subfigure}[b]{0.7\textwidth}
+\begin{tikzpicture}
+\begin{axis}[ylabel={Seller Choice Probabilities}, width=\textwidth, height=0.3\textheight, no markers, legend style={at={(1.1,0.5)}, anchor=west, legend columns=1}, legend cell align={left}, ultra thick, xmin=-0.01, xmax=1.01, xticklabels={}, ymin=0, ymax=1,
+legend entries={$\mathbb{P}(p_H|v_H)$,$\mathbb{P}(p_H|v_L)$}]
+\addlegendimage{no markers, blue, solid}
+\addlegendimage{no markers, orange, solid}
+
+\addplot [color=blue, solid] table [x=e, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_0.data};
+
+\addplot [color=blue, solid] table [x=e, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_1.data};
+
+\addplot [color=blue, solid] table [x=e, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_2.data};
+
+\addplot [color=blue, solid] table [x=e, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_3.data};
+
+\addplot [color=blue, solid] table [x=e, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_4.data};
+
+\addplot [color=blue, solid] table [x=e, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_5.data};
+
+\addplot [color=blue, solid] table [x=e, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_6.data};
+
+\addplot [color=blue, solid] table [x=e, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_7.data};
+
+\addplot [color=blue, solid] table [x=e, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_8.data};
+
+\addplot [color=blue, solid] table [x=e, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_9.data};
+
+\addplot [color=blue, solid] table [x=e, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_10.data};
+
+\addplot [color=blue, solid] table [x=e, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_11.data};
+
+\addplot [color=orange, solid] table [x=e, y=pshl, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_0.data};
+
+\addplot [color=orange, solid] table [x=e, y=pshl, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_1.data};
+
+\addplot [color=orange, solid] table [x=e, y=pshl, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_2.data};
+
+\addplot [color=orange, solid] table [x=e, y=pshl, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_3.data};
+
+\addplot [color=orange, solid] table [x=e, y=pshl, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_4.data};
+
+\addplot [color=orange, solid] table [x=e, y=pshl, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_5.data};
+
+\addplot [color=orange, solid] table [x=e, y=pshl, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_6.data};
+
+\addplot [color=orange, solid] table [x=e, y=pshl, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_7.data};
+
+\addplot [color=orange, solid] table [x=e, y=pshl, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_8.data};
+
+\addplot [color=orange, solid] table [x=e, y=pshl, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_9.data};
+
+\addplot [color=orange, solid] table [x=e, y=pshl, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_10.data};
+
+\addplot [color=orange, solid] table [x=e, y=pshl, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_11.data};
+
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+
+\begin{subfigure}[b]{0.7\textwidth}
+\begin{tikzpicture}
+\begin{axis}[   ylabel={Buyer Choice Probabilities}, 
+                width=\textwidth, 
+                height=0.3\textheight, 
+                no markers, 
+                legend style={at={(1.1,0.5)}, anchor=west, legend columns=1}, 
+                legend cell align={left}, 
+                ultra thick, 
+                xmin=-0.01, xmax=1.01, xticklabels={}, 
+                ymin=0, ymax=1,
+                legend entries={$\mathbb{P}(\text{buy}|{p_H, \ p_H})$,
+                                $\mathbb{P}(\text{buy}|{p_L, \ p_L})$,
+                                $\mathbb{P}({\text{buy} \ p_H}|{p_H, \ p_L})$,
+                                $\mathbb{P}({\text{buy} \ p_L}|{p_H, \ p_L})$}
+                ]
+\addlegendimage{no markers, blue, solid}
+\addlegendimage{no markers, orange, solid}
+\addlegendimage{no markers, blue, dashed}
+\addlegendimage{no markers, orange, dashed}
+
+\addplot [color=blue, solid] table [x=e, y=pbhh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_0.data};
+
+\addplot [color=blue, solid] table [x=e, y=pbhh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_1.data};
+
+\addplot [color=blue, solid] table [x=e, y=pbhh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_2.data};
+
+\addplot [color=blue, solid] table [x=e, y=pbhh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_3.data};
+
+\addplot [color=blue, solid] table [x=e, y=pbhh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_4.data};
+
+\addplot [color=blue, solid] table [x=e, y=pbhh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_5.data};
+
+\addplot [color=blue, solid] table [x=e, y=pbhh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_6.data};
+
+\addplot [color=blue, solid] table [x=e, y=pbhh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_7.data};
+
+\addplot [color=blue, solid] table [x=e, y=pbhh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_8.data};
+
+\addplot [color=blue, solid] table [x=e, y=pbhh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_9.data};
+
+\addplot [color=blue, solid] table [x=e, y=pbhh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_10.data};
+
+\addplot [color=blue, solid] table [x=e, y=pbhh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_11.data};
+
+\addplot [color=orange, solid] table [x=e, y=pbll, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_0.data};
+
+\addplot [color=orange, solid] table [x=e, y=pbll, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_1.data};
+
+\addplot [color=orange, solid] table [x=e, y=pbll, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_2.data};
+
+\addplot [color=orange, solid] table [x=e, y=pbll, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_3.data};
+
+\addplot [color=orange, solid] table [x=e, y=pbll, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_4.data};
+
+\addplot [color=orange, solid] table [x=e, y=pbll, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_5.data};
+
+\addplot [color=orange, solid] table [x=e, y=pbll, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_6.data};
+
+\addplot [color=orange, solid] table [x=e, y=pbll, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_7.data};
+
+\addplot [color=orange, solid] table [x=e, y=pbll, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_8.data};
+
+\addplot [color=orange, solid] table [x=e, y=pbll, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_9.data};
+
+\addplot [color=orange, solid] table [x=e, y=pbll, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_10.data};
+
+\addplot [color=orange, solid] table [x=e, y=pbll, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_11.data};
+
+\addplot [color=blue, dashed] table [x=e, y=pbhb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_0.data};
+
+\addplot [color=blue, dashed] table [x=e, y=pbhb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_1.data};
+
+\addplot [color=blue, dashed] table [x=e, y=pbhb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_2.data};
+
+\addplot [color=blue, dashed] table [x=e, y=pbhb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_3.data};
+
+\addplot [color=blue, dashed] table [x=e, y=pbhb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_4.data};
+
+\addplot [color=blue, dashed] table [x=e, y=pbhb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_5.data};
+
+\addplot [color=blue, dashed] table [x=e, y=pbhb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_6.data};
+
+\addplot [color=blue, dashed] table [x=e, y=pbhb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_7.data};
+
+\addplot [color=blue, dashed] table [x=e, y=pbhb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_8.data};
+
+\addplot [color=blue, dashed] table [x=e, y=pbhb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_9.data};
+
+\addplot [color=blue, dashed] table [x=e, y=pbhb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_10.data};
+
+\addplot [color=blue, dashed] table [x=e, y=pbhb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_11.data};
+
+\addplot [color=orange, dashed] table [x=e, y=pblb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_0.data};
+
+\addplot [color=orange, dashed] table [x=e, y=pblb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_1.data};
+
+\addplot [color=orange, dashed] table [x=e, y=pblb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_2.data};
+
+\addplot [color=orange, dashed] table [x=e, y=pblb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_3.data};
+
+\addplot [color=orange, dashed] table [x=e, y=pblb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_4.data};
+
+\addplot [color=orange, dashed] table [x=e, y=pblb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_5.data};
+
+\addplot [color=orange, dashed] table [x=e, y=pblb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_6.data};
+
+\addplot [color=orange, dashed] table [x=e, y=pblb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_7.data};
+
+\addplot [color=orange, dashed] table [x=e, y=pblb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_8.data};
+
+\addplot [color=orange, dashed] table [x=e, y=pblb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_9.data};
+
+\addplot [color=orange, dashed] table [x=e, y=pblb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_10.data};
+
+\addplot [color=orange, dashed] table [x=e, y=pblb, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_11.data};
+
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+
+\begin{subfigure}[b]{0.7\textwidth}
+\begin{tikzpicture}
+\begin{axis}[ylabel={Buyer Beliefs}, xlabel={Precision ($1 - \epsilon$)}, width=\textwidth, height=0.3\textheight, no markers, legend style={at={(1.1,0.5)}, anchor=west, legend columns=1}, legend cell align={left}, ultra thick, xmin=-0.01, xmax=1.01, ymin=0, ymax=1,
+legend entries={$\mathbb{P}(v_H|p_H)$,$\mathbb{P}(v_H|p_L)$}]
+\addlegendimage{no markers, blue, solid}
+\addlegendimage{no markers, orange, solid}
+
+\addplot [color=blue, solid] table [x=e, y=muh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_0.data};
+
+\addplot [color=blue, solid] table [x=e, y=muh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_1.data};
+
+\addplot [color=blue, solid] table [x=e, y=muh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_2.data};
+
+\addplot [color=blue, solid] table [x=e, y=muh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_3.data};
+
+\addplot [color=blue, solid] table [x=e, y=muh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_4.data};
+
+\addplot [color=blue, solid] table [x=e, y=muh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_5.data};
+
+\addplot [color=blue, solid] table [x=e, y=muh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_6.data};
+
+\addplot [color=blue, solid] table [x=e, y=muh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_7.data};
+
+\addplot [color=blue, solid] table [x=e, y=muh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_8.data};
+
+\addplot [color=blue, solid] table [x=e, y=muh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_9.data};
+
+\addplot [color=blue, solid] table [x=e, y=muh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_10.data};
+
+\addplot [color=blue, solid] table [x=e, y=muh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_11.data};
+
+\addplot [color=orange, solid] table [x=e, y=mul, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_0.data};
+
+\addplot [color=orange, solid] table [x=e, y=mul, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_1.data};
+
+\addplot [color=orange, solid] table [x=e, y=mul, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_2.data};
+
+\addplot [color=orange, solid] table [x=e, y=mul, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_3.data};
+
+\addplot [color=orange, solid] table [x=e, y=mul, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_4.data};
+
+\addplot [color=orange, solid] table [x=e, y=mul, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_5.data};
+
+\addplot [color=orange, solid] table [x=e, y=mul, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_6.data};
+
+\addplot [color=orange, solid] table [x=e, y=mul, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_7.data};
+
+\addplot [color=orange, solid] table [x=e, y=mul, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_8.data};
+
+\addplot [color=orange, solid] table [x=e, y=mul, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_9.data};
+
+\addplot [color=orange, solid] table [x=e, y=mul, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_10.data};
+
+\addplot [color=orange, solid] table [x=e, y=mul, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_11.data};
+
+\end{axis}
+\end{tikzpicture}
+\end{subfigure}
+
+\caption{Trembling-hand correspondence for $n=2$}
+\label{THprobs_n2}
+%\begin{minipage}{0.7\textwidth}
+%\footnotesize
+%\textit{Notes:} This figure is based on the actual parameter values used in the experiment. Because firms are symmetric, the average price is simply $x p_H + (1-x) p_L$ where $x$ is the unconditional probability of an individual firm setting the high price.
+%\end{minipage}
+\end{figure}

@@ -1,0 +1,19 @@
+
+\begin{figure}[htbp]
+\begin{tikzpicture}
+\begin{axis}[no markers, legend style={at={(1.1,0.5)}, anchor=west, legend columns=1}, xlabel={Number of firms}, ylabel={Average price in equilibrium}, legend cell align={left}, xtick={1, 2, 3}, xticklabels={1, 2, 3}, ytick={80, 160}, yticklabels={$p_L$, $p_H$}, ultra thick, xmin=0.75, xmax=3.25]
+\addplot [color=black, solid] table [x=pool_n, y=pool_avg_price, col sep=comma, unbounded coords=jump] {../output/Theory Section/avgprice.data};
+\addlegendentry{Pooling at $p_L$}
+\addplot [color=red, dotted] table [x=lmix_n, y=lmix_avg_price, col sep=comma, unbounded coords=jump] {../output/Theory Section/avgprice.data};
+\addlegendentry{Low-type mixes}
+\addplot [color=blue, dashed] table [x=hmix_n, y=hmix_avg_price, col sep=comma, unbounded coords=jump] {../output/Theory Section/avgprice.data};
+\addlegendentry{High-type mixes}
+\end{axis}
+\end{tikzpicture}
+\caption{Average price as competition increases}
+\label{average_price}
+\begin{minipage}{0.8\textwidth}
+\footnotesize
+\textit{Notes:} This figure is based on the actual parameter values used in the experiment. Because firms are symmetric, the average price is simply $x p_H + (1-x) p_L$ where $x$ is the unconditional probability of an individual firm setting the high price.
+\end{minipage}
+\end{figure}

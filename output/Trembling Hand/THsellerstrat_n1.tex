@@ -1,0 +1,17 @@
+
+\begin{figure}[htbp]
+\begin{tikzpicture}
+\begin{axis}[ylabel={$\mathbb{P}(p_H|v_H)$}, xlabel={$\mathbb{P}(p_H|v_L)$}, no markers, ultra thick, xmin=0, xmax=1, ymin=0, ymax=1]
+\addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobsmain_n1.data};
+\addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobsside_n1.data};
+\addplot [color=blue, only marks, mark=*, mark size=3] coordinates {(0.6666666666666667, 1.0)};
+\addplot [color=blue, only marks, mark=*, mark size=3] coordinates {(0.0, 0.0)};
+\end{axis}
+\end{tikzpicture}
+\caption{Trembling-Hand Seller Strategies for $n=1$}
+\label{THsellerstrat_n1}
+%\begin{minipage}{0.8\textwidth}
+%\footnotesize
+%\textit{Notes:} This figure is based on the actual parameter values used in the experiment. Because firms are symmetric, the average price is simply $x p_H + (1-x) p_L$ where $x$ is the unconditional probability of an individual firm setting the high price.
+%\end{minipage}
+\end{figure}

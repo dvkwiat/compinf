@@ -1,0 +1,66 @@
+
+\begin{figure}[htbp]\flushleft
+
+\begin{subfigure}[b]{0.45\textwidth}
+\begin{tikzpicture}[scale=0.85]
+\begin{axis}[ylabel={$\mathbb{P}(p_H|v_H)$}, xlabel={$\mathbb{P}(p_H|v_L)$}, ultra thick, xmin=0, xmax=1, ymin=0, ymax=1]
+\addplot[no markers, color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobsmain_n1.data};
+\addplot[no markers, color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobsside_n1.data};
+\addplot[no markers, color=blue, only marks, mark=*, mark size=2] coordinates {(0.6666666666666667, 1.0)};
+\addplot[no markers, color=blue, only marks, mark=*, mark size=2] coordinates {(0.0, 0.0)};
+\addplot[only marks, mark=*, mark options={color=black, fill=black}] table[x=pshl_1s, y=pshh_1s, col sep=comma] {../output/Results Section/sellerstrat_bysession_first.data}; 
+\node[star,star points=5,star point ratio=2.5,scale=0.7,draw] at (0.5398054287017536, 0.8097081430526305) {} ;
+\end{axis}
+\end{tikzpicture}
+\caption{$n = 1$}
+\end{subfigure}
+\hspace{0.01\textwidth}
+\begin{subfigure}[b]{0.45\textwidth}
+\begin{tikzpicture}[scale=0.85]
+\begin{axis}[ylabel={}, xlabel={$\mathbb{P}(p_H|v_L)$}, ytick={}, yticklabels={}, ultra thick, xmin=0, xmax=1, ymin=0, ymax=1, legend style={at={(1.1,0.5)}, anchor=west, legend columns=1}, legend cell align=left,
+legend entries={Data,Best-fit THPE}]
+\addlegendimage{color=black, only marks, mark=*, mark size=2}
+\addlegendimage{mark=none, legend image code/.code={%
+\node[star,star points=5,star point ratio=2.5,scale=0.5,draw] at (0.3cm,0) {};
+}}
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_0.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_1.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_2.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_3.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_4.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_5.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_6.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_7.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_8.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_9.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_10.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_11.data};
+    
+\addplot[color=blue, only marks, mark=*, mark size=2, forget plot] coordinates {(0.25, 1.0)};
+\addplot[color=blue, only marks, mark=*, mark size=2, forget plot] coordinates {(0.0, 0.75)};
+\addplot[color=blue, only marks, mark=*, mark size=2, forget plot] coordinates {(0.0, 0.0)};
+\addplot[only marks, mark=*, mark options={color=black, fill=black}] table[x=pshl_2s, y=pshh_2s, col sep=comma, forget plot] {../output/Results Section/sellerstrat_bysession_first.data}; 
+\node[star,star points=5,star point ratio=2.5,scale=0.7,draw] at (0.4475567440817227, 0.671335116122584) {};
+\end{axis}
+\end{tikzpicture}
+\caption{$n = 2$}
+\end{subfigure}
+
+\caption{Trembling-Hand Seller Strategies}
+\label{thsellerstratmle}
+%\begin{minipage}{0.8\textwidth}
+%\footnotesize
+%\textit{Notes:} Notice this notable note denotes noteworthy notices.
+%\end{minipage}
+\end{figure}

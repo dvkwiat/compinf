@@ -1,0 +1,41 @@
+
+\begin{figure}[htbp]
+\begin{tikzpicture}
+\begin{axis}[ylabel={$\mathbb{P}(p_H|v_H)$}, xlabel={$\mathbb{P}(p_H|v_L)$}, no markers, ultra thick, xmin=0, xmax=1, ymin=0, ymax=1]
+
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_0.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_1.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_2.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_3.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_4.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_5.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_6.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_7.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_8.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_9.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_10.data};
+    
+    \addplot [color=blue, solid] table [x=pshl, y=pshh, col sep=comma, unbounded coords=jump] {../output/Trembling Hand/THprobs_n2_11.data};
+    
+\addplot [color=blue, only marks, mark=*, mark size=3] coordinates {(0.25, 1.0)};
+\addplot [color=blue, only marks, mark=*, mark size=3] coordinates {(0.0, 0.75)};
+\addplot [color=blue, only marks, mark=*, mark size=3] coordinates {(0.0, 0.0)};
+\end{axis}
+\end{tikzpicture}
+\caption{Trembling-Hand Seller Strategies for $n=2$}
+\label{THsellerstrat_n2}
+%\begin{minipage}{0.8\textwidth}
+%\footnotesize
+%\textit{Notes:} This figure is based on the actual parameter values used in the experiment. Because firms are symmetric, the average price is simply $x p_H + (1-x) p_L$ where $x$ is the unconditional probability of an individual firm setting the high price.
+%\end{minipage}
+\end{figure}

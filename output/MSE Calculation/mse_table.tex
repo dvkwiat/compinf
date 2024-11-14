@@ -1,0 +1,30 @@
+
+\begin{table}[htbp]
+\renewcommand{\arraystretch}{1}
+\begin{tabular}{lccc}
+%\multicolumn{4}{c}{\textbf{Table 1: Nash Equilibrium Selection using MSE}} \\
+\toprule
+\multicolumn{4}{c}{$n = 1$ firm} \\
+\midrule 
+& \textbf{Low-types mix} &  & \textbf{Pooling} \\
+\cmidrule(lr){2-2} \cmidrule(lr){4-4} 
+MSE & 0.025 (0.006) &  & 0.241 (0.030) \\
+likelihood & 1.000 &  & 0.000 \\
+$\mathbb{P}(p_H|v_H)$ & 1.000 &  & 0.000 \\
+$\mathbb{P}(p_H|v_L)$ & 0.667 &  & 0.000 \\
+informativeness & 0.667 &  & 0.500 \\
+\midrule
+\multicolumn{4}{c}{$n = 2$ firms} \\
+\midrule 
+& \textbf{Low-types mix} & \textbf{High-types mix} & \textbf{Pooling} \\
+\cmidrule(lr){2-2} \cmidrule(lr){3-3} \cmidrule(lr){4-4}
+MSE & 0.109 (0.015) & 0.111 (0.014) & 0.111 (0.024) \\
+likelihood & 0.481 & 0.047 & 0.472 \\
+$\mathbb{P}(p_H|v_H)$ & 1.000 & 0.750 & 0.000 \\
+$\mathbb{P}(p_H|v_L)$ & 0.250 & 0.000 & 0.000 \\
+informativeness & 0.875 & 0.875 & 0.500 \\
+\bottomrule
+\end{tabular}
+\caption{Nash Equilibrium Selection using MSE}
+\label{mse_table}
+\end{table}
